@@ -1,24 +1,377 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W4N-b8-Ycg">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="qTK-Or-wHG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="W4N-b8-Ycg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="80F-0w-sQO">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MqO-pO-9hs" kind="relationship" relationship="rootViewController" id="kwX-0H-Rmg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhq-Om-rc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-932" y="145"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eLm-0g-LPg">
+            <objects>
+                <viewController id="MqO-pO-9hs" customClass="MYOAViewController" customModule="MakeYourOwnAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xiY-nz-JOL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dti-TA-FWD" userLabel="choice1">
+                                <rect key="frame" x="16" y="282" width="288" height="37"/>
+                                <color key="backgroundColor" red="0.66817594579999995" green="0.49547084790000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="ue8-ps-rXM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Yell for Mom and stay put.">
+                                    <color key="titleColor" red="0.99942404029999998" green="0.83008759139999999" blue="0.75031171409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="R7J-XB-Ztj" kind="show" id="SNd-R1-qCN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27Z-Lg-qZg" userLabel="choice2">
+                                <rect key="frame" x="16" y="326" width="288" height="37"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.83008759139999999" blue="0.75031171409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="uHN-n2-5BU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Follow the glowing orb.">
+                                    <color key="titleColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wyw-uu-K3j" kind="show" id="guA-6Q-9b3"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-Wr-U1q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="210"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="Mwc-Sd-kMV"/>
+                                </constraints>
+                                <string key="text">Little Baylee has woken from a strange dream and sits up in bed. She rubs her eyes and stretches a bit before setting her feet on the floor. As she groggily shuffles to the door she glimpses a strange glow floating down the hall. Startled, she looks around for the source of the light but does not find it.
+
+
+What should she do next?</string>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.116327367" green="0.026884866649999999" blue="0.2540053934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E0s-Wr-U1q" firstAttribute="top" secondItem="DpD-uM-4du" secondAttribute="top" id="3N1-sO-2rx"/>
+                            <constraint firstItem="27Z-Lg-qZg" firstAttribute="top" secondItem="dti-TA-FWD" secondAttribute="bottom" constant="7" id="3NM-3D-QrN"/>
+                            <constraint firstItem="E0s-Wr-U1q" firstAttribute="trailing" secondItem="DpD-uM-4du" secondAttribute="trailing" id="7Hg-Nj-TmV"/>
+                            <constraint firstItem="dti-TA-FWD" firstAttribute="top" secondItem="E0s-Wr-U1q" secondAttribute="bottom" constant="8" id="Fr5-AJ-05z"/>
+                            <constraint firstItem="27Z-Lg-qZg" firstAttribute="top" secondItem="dti-TA-FWD" secondAttribute="bottom" constant="7" id="SGc-Io-3MX"/>
+                            <constraint firstItem="E0s-Wr-U1q" firstAttribute="centerX" secondItem="dti-TA-FWD" secondAttribute="centerX" id="eHn-3A-h4z"/>
+                            <constraint firstItem="E0s-Wr-U1q" firstAttribute="centerX" secondItem="27Z-Lg-qZg" secondAttribute="centerX" id="ivI-cc-Av3"/>
+                            <constraint firstItem="E0s-Wr-U1q" firstAttribute="leading" secondItem="DpD-uM-4du" secondAttribute="leading" id="xKs-pb-TQW"/>
+                            <constraint firstItem="E0s-Wr-U1q" firstAttribute="centerX" secondItem="xiY-nz-JOL" secondAttribute="centerX" id="zrk-Vc-1le"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DpD-uM-4du"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Inr-Ro-dC0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0YL-K1-tyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84.375" y="145"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qcd-7b-QY7">
+            <objects>
+                <viewController id="wyw-uu-K3j" customClass="MYOAViewController" customModule="MakeYourOwnAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xVr-vc-ks3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-Yi-Cs1" userLabel="choice1">
+                                <rect key="frame" x="16" y="282" width="288" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="rte-vh-BU8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="A fairy appears">
+                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aR1-DR-G3z" kind="show" id="a0C-zY-jxf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcR-Lb-uyH" userLabel="choice2">
+                                <rect key="frame" x="16" y="326" width="288" height="37"/>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="KNu-Vw-GFB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="It disappears with a pop"/>
+                                <connections>
+                                    <segue destination="wUS-ao-oPJ" kind="show" id="TKK-gG-8A3"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QRZ-dE-pNZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="210"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.83008759139999999" blue="0.75031171409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="1K8-eR-HG5"/>
+                                </constraints>
+                                <string key="text">As Baylee slowly creeps down the hall she tries to stay as silent as possible so she does not scare the ball of light. The ball stops drifting forward and just hangs in the air as if it knows Baylee is following it. The light slowly starts to spin until </string>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16236922049477512" green="0.072424592888194805" blue="0.31803220180659897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QRZ-dE-pNZ" firstAttribute="trailing" secondItem="iYy-bt-kCY" secondAttribute="trailing" id="7uU-VN-yHs"/>
+                            <constraint firstItem="Thc-Yi-Cs1" firstAttribute="top" secondItem="QRZ-dE-pNZ" secondAttribute="bottom" constant="8" id="8qU-Jl-eUb"/>
+                            <constraint firstItem="QRZ-dE-pNZ" firstAttribute="centerX" secondItem="XcR-Lb-uyH" secondAttribute="centerX" id="NDi-aT-uQ6"/>
+                            <constraint firstItem="QRZ-dE-pNZ" firstAttribute="top" secondItem="iYy-bt-kCY" secondAttribute="top" id="Nti-Qe-2qe"/>
+                            <constraint firstItem="QRZ-dE-pNZ" firstAttribute="centerX" secondItem="Thc-Yi-Cs1" secondAttribute="centerX" id="Qo5-1l-Yy1"/>
+                            <constraint firstItem="QRZ-dE-pNZ" firstAttribute="leading" secondItem="iYy-bt-kCY" secondAttribute="leading" id="YDS-lR-7Lk"/>
+                            <constraint firstItem="QRZ-dE-pNZ" firstAttribute="centerX" secondItem="xVr-vc-ks3" secondAttribute="centerX" id="tGk-ud-BJX"/>
+                            <constraint firstItem="XcR-Lb-uyH" firstAttribute="top" secondItem="Thc-Yi-Cs1" secondAttribute="bottom" constant="7" id="wV7-0o-xcg"/>
+                            <constraint firstItem="XcR-Lb-uyH" firstAttribute="top" secondItem="Thc-Yi-Cs1" secondAttribute="bottom" constant="7" id="xlU-WQ-QgP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iYy-bt-kCY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PPW-A9-Rdd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qn7-HE-NMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="598"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Inq-0Z-Vvc">
+            <objects>
+                <viewController id="R7J-XB-Ztj" customClass="MYOAViewController" customModule="MakeYourOwnAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WvY-WW-5af">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U68-Xr-GQE" userLabel="choice1">
+                                <rect key="frame" x="16" y="282" width="288" height="37"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="pri-fr-CRX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Run and find Mom.">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0CM-I8-8FR" kind="show" id="quf-tn-IWJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i6-Fi-TnJ" userLabel="choice2">
+                                <rect key="frame" x="16" y="326" width="288" height="37"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="Kve-Pi-uSG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Hide and wait for Dad">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BMv-uK-j6g" kind="show" id="oc4-yd-VdT"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ezz-s1-YZh">
+                                <rect key="frame" x="0.0" y="64" width="320" height="210"/>
+                                <color key="backgroundColor" red="0.66817594579999995" green="0.49547084790000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="OUr-G0-2af"/>
+                                </constraints>
+                                <string key="text">"MOOOOOOOOOOOM! MOOOOOMMMMMYYYY!!" she yells as loud as she can in her most terrified voice. But Mom does not respond. Where could she be? Why doesn't she answer?  Now Baylee is alone and terrified and has no idea what to do now.  
+
+She should</string>
+                                <color key="textColor" red="0.99942404029999998" green="0.83008759139999999" blue="0.75031171409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14228353306462363" green="0.032228157347607457" blue="0.3179925444152284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6i6-Fi-TnJ" firstAttribute="top" secondItem="U68-Xr-GQE" secondAttribute="bottom" constant="7" id="EuI-oS-6A6"/>
+                            <constraint firstItem="Ezz-s1-YZh" firstAttribute="leading" secondItem="qYk-UY-AcK" secondAttribute="leading" id="KWs-6N-91f"/>
+                            <constraint firstItem="U68-Xr-GQE" firstAttribute="top" secondItem="Ezz-s1-YZh" secondAttribute="bottom" constant="8" id="Mai-Gz-tnr"/>
+                            <constraint firstItem="Ezz-s1-YZh" firstAttribute="centerX" secondItem="WvY-WW-5af" secondAttribute="centerX" id="MlU-3V-gKP"/>
+                            <constraint firstItem="Ezz-s1-YZh" firstAttribute="trailing" secondItem="qYk-UY-AcK" secondAttribute="trailing" id="PYC-KI-Ym1"/>
+                            <constraint firstItem="Ezz-s1-YZh" firstAttribute="top" secondItem="qYk-UY-AcK" secondAttribute="top" id="T9p-RF-VWR"/>
+                            <constraint firstItem="6i6-Fi-TnJ" firstAttribute="top" secondItem="U68-Xr-GQE" secondAttribute="bottom" constant="7" id="V4r-SR-k7S"/>
+                            <constraint firstItem="Ezz-s1-YZh" firstAttribute="centerX" secondItem="6i6-Fi-TnJ" secondAttribute="centerX" id="rNk-PT-SEp"/>
+                            <constraint firstItem="Ezz-s1-YZh" firstAttribute="centerX" secondItem="U68-Xr-GQE" secondAttribute="centerX" id="ycw-5r-hIV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qYk-UY-AcK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c9W-hi-s4c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMT-XF-Krz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="-128"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1DW-I8-ba7">
+            <objects>
+                <viewController id="wUS-ao-oPJ" customClass="MYOAViewController" customModule="MakeYourOwnAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wDX-YL-Zdt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r5u-vI-yoY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="210"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="4jQ-q6-uYI"/>
+                                </constraints>
+                                <string key="text">Baylee giggles at the sound of it and tries to go where the pop was. She heard the fairy giggle and pout because she didn't like to be laughed at. Since fairies can only come to a place one time in a bubble, she could no longer visit with Baylee. </string>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.116327367" green="0.026884866649999999" blue="0.2540053934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r5u-vI-yoY" firstAttribute="trailing" secondItem="KkE-A6-usE" secondAttribute="trailing" id="ApE-Tc-WOa"/>
+                            <constraint firstItem="r5u-vI-yoY" firstAttribute="centerX" secondItem="wDX-YL-Zdt" secondAttribute="centerX" id="CaP-Q2-pWI"/>
+                            <constraint firstItem="r5u-vI-yoY" firstAttribute="top" secondItem="KkE-A6-usE" secondAttribute="top" id="EKw-aQ-CS9"/>
+                            <constraint firstItem="r5u-vI-yoY" firstAttribute="leading" secondItem="KkE-A6-usE" secondAttribute="leading" id="zNU-hf-BQI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KkE-A6-usE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9cQ-UT-3LO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVz-2t-n4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="1545"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FIK-Lu-tBv">
+            <objects>
+                <viewController id="aR1-DR-G3z" customClass="MYOAViewController" customModule="MakeYourOwnAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mBs-IL-FcV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pjj-Qx-zAg">
+                                <rect key="frame" x="0.0" y="64" width="320" height="210"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="hQy-DT-nqt"/>
+                                </constraints>
+                                <string key="text">It turns and looks at Baylee and motions for her to follow it. They go back to Baylee's room and she gives Baylee sweet dreams. </string>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.116327367" green="0.026884866649999999" blue="0.2540053934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pjj-Qx-zAg" firstAttribute="leading" secondItem="6ao-Tz-H7W" secondAttribute="leading" id="BTN-wn-L7P"/>
+                            <constraint firstItem="pjj-Qx-zAg" firstAttribute="top" secondItem="6ao-Tz-H7W" secondAttribute="top" id="Vwr-C9-037"/>
+                            <constraint firstItem="pjj-Qx-zAg" firstAttribute="centerX" secondItem="mBs-IL-FcV" secondAttribute="centerX" id="a3d-Hg-p2w"/>
+                            <constraint firstItem="pjj-Qx-zAg" firstAttribute="trailing" secondItem="6ao-Tz-H7W" secondAttribute="trailing" id="bDF-jv-cXX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6ao-Tz-H7W"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WLV-ek-qfg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsF-ID-GBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cEe-ok-UYX">
+            <objects>
+                <viewController id="BMv-uK-j6g" customClass="MYOAViewController" customModule="MakeYourOwnAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4mV-c8-In4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7OH-mC-gkP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="210"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="fP6-lh-sjc"/>
+                                </constraints>
+                                <string key="text">Baylee runs to the kitchen and hides in the freezer. No one will find her there. Daddy gets hungry and looks in the freezer for something to eat but finds Baylee instead! Since she had turned into an ice cube, daddy put her in his drink! </string>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.116327367" green="0.026884866649999999" blue="0.2540053934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7OH-mC-gkP" firstAttribute="centerX" secondItem="4mV-c8-In4" secondAttribute="centerX" id="3Xc-n4-ftP"/>
+                            <constraint firstItem="7OH-mC-gkP" firstAttribute="leading" secondItem="WJa-Ed-sG5" secondAttribute="leading" id="QKl-SQ-BAc"/>
+                            <constraint firstItem="7OH-mC-gkP" firstAttribute="top" secondItem="WJa-Ed-sG5" secondAttribute="top" id="RVC-1V-VgW"/>
+                            <constraint firstItem="7OH-mC-gkP" firstAttribute="trailing" secondItem="WJa-Ed-sG5" secondAttribute="trailing" id="gNN-Pm-2v3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WJa-Ed-sG5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tXl-W8-WNh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0o6-GN-Mo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="19"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XKQ-5R-Fag">
+            <objects>
+                <viewController id="0CM-I8-8FR" customClass="MYOAViewController" customModule="MakeYourOwnAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JBi-0O-Ftb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-lh-qDa">
+                                <rect key="frame" x="0.0" y="64" width="320" height="210"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="8sh-4M-82z"/>
+                                </constraints>
+                                <string key="text">She was gone! Baylee didn't know what to do! The fairy looked so scary and had red eyes with black spots. Maybe it wasn't a good fairy, maybe it was a demon fairy. So Baylee took her sword and defended herself. </string>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.116327367" green="0.026884866649999999" blue="0.2540053934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fZL-lh-qDa" firstAttribute="trailing" secondItem="2Ym-h5-FC4" secondAttribute="trailing" id="FJU-N8-AQp"/>
+                            <constraint firstItem="fZL-lh-qDa" firstAttribute="leading" secondItem="2Ym-h5-FC4" secondAttribute="leading" id="Plr-iX-GPJ"/>
+                            <constraint firstItem="fZL-lh-qDa" firstAttribute="centerX" secondItem="JBi-0O-Ftb" secondAttribute="centerX" id="qZn-dx-c6i"/>
+                            <constraint firstItem="fZL-lh-qDa" firstAttribute="top" secondItem="2Ym-h5-FC4" secondAttribute="top" id="yLV-zN-Ouh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ym-h5-FC4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wG5-Z6-7BN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbv-6a-xoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="-693"/>
         </scene>
     </scenes>
 </document>
